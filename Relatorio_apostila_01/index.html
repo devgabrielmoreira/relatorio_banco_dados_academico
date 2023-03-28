@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Relatório Acadêmico: Normalização de Dados</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Relatório Acadêmico: Normalização de Dados</h1>
+	</header>
+    <main>
+	<section>
+		<h2>Introdução</h2>
+		<p>A Modelagem de Dados é um processo essencial para a construção de um Banco de Dados, e tem como principal objetivo definir a estrutura do banco, através da distribuição dos dados em tabelas. A Normalização é uma técnica utilizada para análise e organização dos dados que visa determinar a melhor composição para uma estrutura de dados. Neste relatório, abordaremos a importância do processo de normalização e suas etapas.</p>
+	</section>
+	<section>
+		<h2>Normalização de Dados</h2>
+		<p>A Normalização é um processo passo a passo que consiste na simplificação dos atributos dentro de uma Classe (Tabela), aumentando o entendimento do Modelo e contribuindo de forma considerável para a estabilidade da Base de Dados. O processo de Normalização tem como principais objetivos: eliminar anomalias que dificultam as operações com os dados, minimizar as redundâncias e os consequentes riscos de inconsistências e reduzir e facilitar as manutenções. As Formas Normais (FN) são conjuntos de restrições nos quais os dados devem satisfazê-las. A Normalização completa dos dados é feita seguindo as restrições das três formas normais existentes, sendo que a passagem de uma FN para outra é feita tendo como base o resultado obtido na etapa anterior.</p>
+	</section>
+	<section>
+		<h2>Primeira Forma Normal (1FN)</h2>
+		<p>A primeira forma normal consiste em retirar da estrutura os elementos repetitivos, ou seja, aqueles dados que podem compor uma estrutura de vetor. Uma estrutura está normalizada na 1FN se não possuir elementos repetitivos. </p>
+		<p><strong>Exemplo:</strong></p>
+		<ul>
+			<li><strong>Estrutura original:</strong> Arquivo de Notas Fiscais (Num. NF, Série, Data emissão, Cod. do Cliente, Nome do cliente, Endereço do cliente, CGC do cliente, Relação das mercadorias vendidas (onde para cada mercadoria temos: Código da Mercadoria, Descrição da Mercadoria, Quantidade vendida, Preço de venda e Total da venda desta mercadoria) e Total Geral da Nota)</li>
+			<li><strong>Estrutura na primeira forma normal (1FN):</strong> Arquivo de Notas Fiscais (Num. NF, Série, Data emissão, Código do Cliente, Nome Cliente, Endereço do cliente, CGC do cliente e Total Geral da Nota) e Arquivo de Vendas (Num. NF, Código da Mercadoria, Descrição da Mercadoria, Quantidade vendida, Preço de venda e Total da venda desta mercadoria)</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Segunda Forma Normal (2FN)</h2>
+		<p>A segunda forma normal consist;conclua o código html apenas a partir deste ponto e vírgula e em retirar da estrutura os elementos que dependem apenas de uma parte da chave primária, criando uma nova tabela para esses elementos. Uma estrutura está normalizada na 2FN se não possuir dependências parciais em relação à chave primária.</p>
+        <p><strong>Exemplo:</strong></p>
+        <ul>
+        <li><strong>Estrutura original:</strong> Arquivo de Vendas (Num. NF, Código da Mercadoria, Descrição da Mercadoria, Quantidade vendida, Preço de venda e Total da venda desta mercadoria)</li>
+        <li><strong>Estrutura na segunda forma normal (2FN):</strong> Arquivo de Vendas (Num. NF, Código da Mercadoria, Quantidade vendida, Preço de venda e Total da venda desta mercadoria) e Arquivo de Mercadorias (Código da Mercadoria e Descrição da Mercadoria)</li>
+        </ul>
+        </section>
+        <section>
+            <h2>Terceira Forma Normal (3FN)</h2>
+            <p>A terceira forma normal consiste em retirar da estrutura os elementos que dependem de outros atributos que não sejam a chave primária, criando uma nova tabela para esses elementos. Uma estrutura está normalizada na 3FN se não possuir dependências transitivas em relação à chave primária.</p>
+            <p><strong>Exemplo:</strong></p>
+            <ul>
+                <li><strong>Estrutura original:</strong> Arquivo de Clientes (Código do Cliente, Nome Cliente, Endereço do cliente, CGC do cliente e Cidade do Cliente)</li>
+                <li><strong>Estrutura na terceira forma normal (3FN):</strong> Arquivo de Clientes (Código do Cliente, Nome Cliente, Endereço do cliente, CGC do cliente) e Arquivo de Cidades (Cidade do Cliente e Código do Cliente)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Conclusão</h2>
+            <p>A Normalização de Dados é um processo importante e essencial para a construção de um Banco de Dados estruturado e organizado. Ao seguir as etapas das formas normais, é possível eliminar anomalias, minimizar redundâncias e facilitar as manutenções, contribuindo para a estabilidade e eficiência do Banco de Dados. É importante ressaltar que a Normalização deve ser aplicada de acordo com a necessidade do sistema em questão e que a aplicação excessiva pode levar à perda de desempenho do Banco de Dados.</p>
+        </section>
+    </main>
+    <footer>
+        <li><a href="https://github.com/devgabrielmoreira" target="_blank">Gabriel Moreira</a></li>
+        <li><a href=" " target="_blank">Juliene</a></li>
+        <li><a href=" " target="_blank">Gabriel Miranda</a></li>
+        <p>&copy; 2023 - Relatório Acadêmico: Normalização de Dados - Todos os direitos reservados.</p>
+    </footer>
+    </body>
+</html>        
